@@ -1,0 +1,117 @@
+.libraryPage{
+    position: relative;
+    margin-top: 74px;
+    min-height:35.9vh;
+}
+.libraryPage .booksTable{
+    overflow-x: auto;
+    padding: 20px;
+}
+.libraryPage .libraryPageTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.libraryPage .libraryPageTop .booksHead{
+    font-size: 50px;
+    color: #4e6bff;
+    font-weight: bold;
+  margin-left: 20px;
+}
+.libraryPage .libraryPageTop .createBookBtn{
+   margin-right: 20px;
+}
+.libraryPage .libraryPageTop .createBookBtn button{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    color: white;
+    background-color: #4e6bff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.libraryPage .popupContainer{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 999;
+}
+.libraryPage .createBookPupup{
+    height: max-content;
+    width: max-content;
+    background-color: white;
+    box-shadow: 1px 1px 3px rgba(200, 194, 194,0.4);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 20px;
+    position: absolute;
+}
+.libraryPage .createBookPupup .popupTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.libraryPage .createBookPupup .popupTop .popupHead{
+    font-weight: bold;
+    font-size: 20px;
+}
+.libraryPage .createBookPupup .popupTop .popupCloseBtn button{
+    height: 40px;
+    width: 40px; 
+  background-color: transparent;
+  margin-left: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  border:1px solid gray;
+  transition: all 2s;
+  cursor: pointer;
+}
+.libraryPage .createBookPupup .popupTop .popupCloseBtn button:hover{
+    background-color: rgb(202, 195, 195);
+}
+.libraryPage .createBookPupup .popupTop .popupCloseBtn button img{
+    height: 50%;
+}
+.libraryPage .createBookPupup .popupContent button{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    color: white;
+    background-color: #4e6bff;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+.libraryPage .createBookPupup .popupContent{
+   display: flex;   
+   flex-direction: column;
+}
+.libraryPage .createBookPupup .popupContent input{
+    height: 30px;
+    width: 350px;
+    border-radius: 20px;
+    margin:15px 0px;
+    border: 1px solid gray;
+    padding-left: 10px;
+    outline: none;
+    transition: all 1s;
+}
+.libraryPage .createBookPupup input:focus{
+    border: 1px solid rgb(153, 153, 235);
+}
+.hide{
+    display: none;
+}
+.show{
+    display: flex;
+}

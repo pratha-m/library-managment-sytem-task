@@ -1,0 +1,205 @@
+.aboutPage{
+    position: relative;
+    margin-top: 74px;
+    min-height: 35.9vh;
+}
+.about,.contact{
+    height: 70vh;
+    display:flex;
+    flex-direction: column;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+    padding-bottom: 0px;
+}
+.about>.aboutUsHead,
+.contact>.contactPageHead{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 900;
+    color: #70808a;
+}
+.about>.aboutUsHead>span,
+.contact>.contactPageHead>span{
+    color: #4e6bff;
+    margin-left: 15px;
+}
+.about>.aboutUsMainContent,
+.contact>.contactPageMain{
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about>.aboutUsMainContent>.aboutUsImage,
+.contact>.contactPageMain>.contactPageImage{
+    height: 70%;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.about>.aboutUsMainContent>.aboutUsImage>img,
+.contact>.contactPageMain>.contactPageImage>img{
+    width: 100%;
+    border-radius: 30px;
+}
+.contact>.contactPageMain>.contactPageImage{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.about>.aboutUsMainContent>.aboutUsTextContent,
+.contact>.contactPageMain>.contactPageTextContent{
+    /* margin-top: 60px; */
+    width: 45%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.about>.aboutUsMainContent>.aboutUsTextContent>p{
+    margin-top: 30px;
+}
+.about>.aboutUsMainContent>.aboutUsTextContent>.socialLinks{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.about>.aboutUsMainContent>.aboutUsTextContent>.socialLinks>ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.about>.aboutUsMainContent>.aboutUsTextContent>.socialLinks>ul>li{
+    height: 40px;
+    width: 40px;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid gray;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.about>.aboutUsMainContent>.aboutUsTextContent>.socialLinks>.eachSocialLink{
+    transition: all 2s;
+}
+.about>.aboutUsMainContent>.aboutUsTextContent>.socialLinks>ul>li:hover .eachSocialLink{
+    transform: translateY(-5px) translateX(3px);
+}
+.about>.aboutUsMainContent>.aboutUsTextContent>.socialLinks>ul>li:hover .eachSocialLink>i{
+    color: white;
+}
+.about>.aboutUsMainContent>.aboutUsTextContent>.socialLinks>ul>li:hover{
+    background-color: #a8a8c5e6;
+}
+
+
+/* Contact us */
+.contact{
+    height: 100vh;
+    padding-bottom: 30px;
+}
+.contact>.contactPageHead{
+    height: 10%;
+}
+.contact>.contactPageMain{
+    height: 90%;
+}
+.contact>.contactPageMain>.contactPageImage{
+    background-image:url("https://img.freepik.com/free-vector/flat-design-illustration-customer-support_23-2148887720.jpg");
+}
+.contact>.contactPageMain>.contactPageTextContent{
+    height: 70%;
+    justify-content: center;
+    margin: 20px;
+}
+.contact>.contactPageMain>.contactPageTextContent>.contactForm{
+   height: 100%;
+   width: 100%;
+   padding: 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   border-radius: 20px;
+   background-color: transparent;
+   box-shadow: 1px 1px 4px black;
+   
+}
+.contact>.contactPageMain>.contactPageTextContent>.contactForm>input{
+    height: 40px;
+    width: 90%;
+    outline: none;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 5px;
+    border: 1px solid #8e8ea2;
+    margin: 5px;
+    background-color: #e8f0fe;
+}
+.contact>.contactPageMain>.contactPageTextContent>.contactForm>textarea{
+    height: 100px;
+    width: 90%;
+    outline: none;
+    font-size: 18px;
+    border-radius: 10px;
+    padding-left: 5px;
+    max-height: 100px;
+    max-width: 93%;
+    min-height: 100px;
+    min-width: 90%;
+    border: 1px solid #8e8ea2;
+    background-color: #e8f0fe;
+    margin: 5px;
+}
+.contact>.contactPageMain>.contactPageTextContent>.contactForm>button{
+    height: 45px;
+    width: 150px;
+    background-color: #4e6bff;
+    border-radius: 50px;
+    /* background-color: gray; */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+}
+@media screen and (max-width:700px) {
+    .about,
+    .contact{
+        height: max-content;
+    }
+    .about>.aboutUsMainContent,
+    .contact>.contactPageMain{
+        flex-direction: column;
+        padding: 30px;
+    }  
+    .about>.aboutUsMainContent>.aboutUsImage,
+    .contact>.contactPageMain>.contactPageImage{
+        width: 100%;
+        height: 300px;
+    }
+    .contact>.contactPageMain>.contactPageImage{
+        height:max-content;
+    }
+    .about>.aboutUsMainContent>.aboutUsTextContent,
+    .contact>.contactPageMain>.contactPageTextContent{
+        height: 40%;
+        width: 100%;
+    }
+    .contact>.contactPageMain>.contactPageTextContent{
+        height: 100%;
+    }
+    .about>.aboutUsMainContent>.aboutUsTextContent>.socialLinks{
+        margin-top: 15px;
+    }
+} 

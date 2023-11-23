@@ -1,0 +1,60 @@
+.homePage{
+    position: relative;
+    margin-top: 74px;
+    min-height: 35.9vh;
+}
+.imgCont{
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+}
+.imgCont img{
+    width: 100%;
+    opacity:0.9;
+}
+.homePage .textCont{
+    height: max-content;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+}
+.homePage .textCont .innText{
+    height: max-content;
+    width: 600px;
+    min-width: 300px;
+    color: white;
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.homePage .textCont .innText .homeHead{
+     font-size: 50px;
+     color: white;  
+     font-weight: bold;
+
+} 
+.homePage .textCont .innText .homePara{
+    font-size: 25px;
+}
+.homePage .textCont .innText .homeExploreBtn{
+    margin:10px 0px;
+}
+.homePage .textCont .innText button{
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid gray;
+    color: white;
+    background-color: #4e6bff;
+    font-size: 18px;
+    cursor: pointer;
+}

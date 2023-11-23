@@ -1,0 +1,74 @@
+.questionsTable{
+    width: 100%;
+    overflow: hidden;
+    /* font-size: 18px;/ */
+    border-collapse: collapse;
+    min-width: 685px;
+    border-radius: 15px;
+  }
+.questionsTable .head{
+  background-color: #4e6bff;
+  color: white;
+  height: 50px;
+}
+.questionsTable th,td {
+  text-align: left;
+  padding:5px 5px;
+}
+.questionsTable td{
+   height: 70px;   
+   border: 1px solid rgb(213, 207, 207);
+}
+.questionsTable tr th .textarea{
+  width: 200px;
+  height: 100px;
+  border: 1px solid black;
+}
+.questionsTable tr{background-color: #f0f0f0;}
+.questionsTable tr:nth-child(even){background-color: #e7e7e7;}
+.questionsTable .dataRow:hover{
+  background-color:#ddd;
+}
+.questionsTable tr td .textarea{
+  /* height: 40px; */
+  border-radius: 5px;
+  overflow-y: hidden;
+  font-size: 18px;
+  margin: 10px;
+}
+.questionsTable tr td input{
+  /* height: 0px; */
+  /* width: 20px; */
+}
+.deleteBtn{
+  background-color: red;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 20px;
+   cursor: pointer;
+}
+.otherBtn{
+  height: 40px;
+  width: 40px; 
+  background-color: transparent;
+  margin-left: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  border:1px solid gray;
+  transition: all 2s;
+  cursor: pointer;
+}
+.otherBtn:hover{
+  background-color: rgb(202, 195, 195);
+}
+.otherBtn img{
+  height: 50%;
+}
+.optionsBox{
+  display: flex;
+  border: none;
+  align-items: center;
+}
