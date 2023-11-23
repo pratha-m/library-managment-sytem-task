@@ -39,14 +39,13 @@ import axios from 'axios';
     catch(error){
       setAllBooks({...allBooks,isFetching:false})
       if(error.response){
-        console.log(error.message)
+        console.log(error.response.data.message)
       }
       else{
         console.log(error.message)
       }
     }
   }
-
   const updateBook=async(bookID)=>{
     const book_name=book_name_element.current.value;
     const book_author=book_author_element.current.value;
@@ -113,7 +112,6 @@ import axios from 'axios';
       errorToast("Pls Fill All Fields")
     }
   }
-
   const clearAllInputs=()=>{
     book_name_element.current.value=null;
     book_author_element.current.value=null;
@@ -122,14 +120,8 @@ import axios from 'axios';
     book_code_element.current.value=null;
     book_price_element.current.value=0;
   }
-  // const setAllInputs=()=>{
-  //   book_name_element.current.value=popup.updateBookData.book_name;
-  //   book_author_element.current.value=popup.updateBookData.book_author;
-  //   book_publisher_element.current.value=popup.updateBookData.book_publisher;
-  //   book_buy_url_element.current.value=popup.updateBookData.book_buy_url;
-  //   book_code_element.current.value=popup.updateBookData.book_code;
-  //   book_price_element.current.value=popup.updateBookData.book_price;
-  // }
+
+
   return (
     <div className='libraryPage'>
        <div className="libraryPageTop">  
@@ -167,55 +159,91 @@ import axios from 'axios';
                 <input 
                   ref={book_name_element}
                   type="text" 
-                  defaultValue={popup.isUpdatedPopup?(popup.updateBookData.book_name):popupFormData.book_name} 
+                  value={popup.isUpdatedPopup?(popup.updateBookData.book_name):popupFormData.book_name} 
                   placeholder='Book Name'
                   onChange={(e)=>{
-                    popup.isUpdatedPopup?(popup.updateBookData.book_name=e.target.value):setPopupFormData({...popupFormData,book_name:e.target.value})
+                    popup.isUpdatedPopup?setPopup({
+                      ...popup,
+                      updateBookData: {
+                        ...popup.updateBookData,
+                        book_name: e.target.value
+                      }
+                    }):setPopupFormData({...popupFormData,book_name:e.target.value})
                   }}
                 />
                 <input 
                   ref={book_author_element}
                   type="text" 
-                  defaultValue={popup.isUpdatedPopup?(popup.updateBookData.book_author):popupFormData.book_author} 
+                  value={popup.isUpdatedPopup?(popup.updateBookData.book_author):popupFormData.book_author} 
                   placeholder='Book Author'
                   onChange={(e)=>{
-                    setPopupFormData({...popupFormData,book_author:e.target.value})
+                    popup.isUpdatedPopup?setPopup({
+                      ...popup,
+                      updateBookData: {
+                        ...popup.updateBookData,
+                        book_author: e.target.value
+                      }
+                    }):setPopupFormData({...popupFormData,book_author:e.target.value})
                   }}
                 />
                 <input 
                   ref={book_price_element}
                   type="number" 
-                  defaultValue={popup.isUpdatedPopup?(popup.updateBookData.book_price):popupFormData.book_price}  
+                  value={popup.isUpdatedPopup?(popup.updateBookData.book_price):popupFormData.book_price}  
                   placeholder='Book Price'
                   onChange={(e)=>{
-                    popup.isUpdatedPopup?(popup.updateBookData.book_price=parseInt(e.target.value)):setPopupFormData({...popupFormData,book_price:parseInt(e.target.value)})
+                    popup.isUpdatedPopup?setPopup({
+                      ...popup,
+                      updateBookData: {
+                        ...popup.updateBookData,
+                        book_price: parseInt(e.target.value)
+                      }
+                    }):setPopupFormData({...popupFormData,book_price:parseInt(e.target.value)})
                   }}
                 />
                 <input 
                   ref={book_publisher_element}
                   type="text" 
-                  defaultValue={popup.isUpdatedPopup?(popup.updateBookData.book_publisher):popupFormData.book_publisher} 
+                  value={popup.isUpdatedPopup?(popup.updateBookData.book_publisher):popupFormData.book_publisher} 
                   placeholder='Book Publisher'
                   onChange={(e)=>{
-                    popup.isUpdatedPopup?(popup.updateBookData.book_publisher=e.target.value):setPopupFormData({...popupFormData,book_publisher:e.target.value})
+                    popup.isUpdatedPopup?setPopup({
+                      ...popup,
+                      updateBookData: {
+                        ...popup.updateBookData,
+                        book_publisher: parseInt(e.target.value)
+                      }
+                    }):setPopupFormData({...popupFormData,book_publisher:e.target.value})
                   }}
                 />
                 <input 
                   ref={book_buy_url_element} 
                   type="text" 
-                  defaultValue={popup.isUpdatedPopup?(popup.updateBookData.book_buy_url):popupFormData.book_buy_url} 
+                  value={popup.isUpdatedPopup?(popup.updateBookData.book_buy_url):popupFormData.book_buy_url} 
                   placeholder='Book Buy Link'
                   onChange={(e)=>{
-                    popup.isUpdatedPopup?(popup.updateBookData.book_buy_url=e.target.value):setPopupFormData({...popupFormData,book_buy_url:e.target.value})
+                    popup.isUpdatedPopup?setPopup({
+                      ...popup,
+                      updateBookData: {
+                        ...popup.updateBookData,
+                        book_buy_url:e.target.value
+                      }
+                    }):setPopupFormData({...popupFormData,book_buy_url:e.target.value})
                   }}
                 />
                 <input 
                   ref={book_code_element}
                   type="text" 
-                  defaultValue={popup.isUpdatedPopup?(popup.updateBookData.book_code):popupFormData.book_code} 
+                  value={popup.isUpdatedPopup?(popup.updateBookData.book_code):popupFormData.book_code} 
                   placeholder='Book Code'
                   onChange={(e)=>{
-                    popup.isUpdatedPopup?(popup.updateBookData.book_code=e.target.value):setPopupFormData({...popupFormData,book_code:e.target.value})
+                    popup.isUpdatedPopup?setPopup({
+                      ...popup,
+                      updateBookData: {
+                        ...popup.updateBookData,
+                        book_code:e.target.value
+                      }
+                    }):setPopupFormData({...popupFormData,book_code:e.target.value})
                   }}
                 />
                 {

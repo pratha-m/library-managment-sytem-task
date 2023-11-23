@@ -121,7 +121,7 @@
 }
 .contact>.contactPageMain>.contactPageTextContent>.contactForm{
    height: 100%;
-   width: 100%;
+   width: 80%;
    padding: 30px;
    display: flex;
    flex-direction: column;

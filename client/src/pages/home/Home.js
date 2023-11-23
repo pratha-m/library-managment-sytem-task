@@ -1,7 +1,9 @@
 import React from 'react'
+import {useNavigate} from "react-router-dom";
 import "./home.css";
 
 const Home = () => {
+  const navigate=useNavigate();
   return (
     <div className='homePage'>
        
@@ -13,7 +15,7 @@ const Home = () => {
             <div className="homeHead">Turn the Page to a New Reading Experience</div>
             <div className="homePara">Let's Get Started on Your Digital Library Adventure!</div>
             <div className="homeExploreBtn">
-              <button>Go To Library</button>
+              <button onClick={()=>{navigate("/library")}}>Go To Library</button>
             </div>
           </div>
        </div>

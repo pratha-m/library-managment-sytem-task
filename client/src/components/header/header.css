@@ -22,7 +22,7 @@ header>.logoContainer{
 }
 header>.logoContainer>a{
     text-decoration: none;
-    color: black;
+    color: gray;
     font-weight:900;
 }
 header>nav{
@@ -45,7 +45,7 @@ header>nav>ul>li{
 }
 header>nav>ul>li>a{
     text-decoration: none;
-    color: black;
+    color: gray;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 header>nav>ul>li>a:hover{
