@@ -31,7 +31,7 @@ import axios from 'axios';
   const getAllBooks=async()=>{
     try{
       setAllBooks({...allBooks,isFetching:true})
-      const result=await axios.post("http://localhost:3001/api/v1/library/book/all",{});
+      const result=await axios.post(`${process.env.REACT_APP_BASE_URL}/api/v1/library/book/all`,{});
       if(result.status===200){
         setAllBooks({books:result.data.books,isFetching:false})
       }
@@ -56,7 +56,7 @@ import axios from 'axios';
     try{
       setProgress(60);
       setAllBooks({isFetching:true,...allBooks});
-      const result=await axios.post("http://localhost:3001/api/v1/library/book/update",{
+      const result=await axios.post(`${process.env.REACT_APP_BASE_URL}/api/v1/library/book/update`,{
         book_name,
         book_author,
         book_price,
@@ -83,7 +83,7 @@ import axios from 'axios';
       try{
         setProgress(60);
         setAllBooks({isFetching:true,...allBooks});
-        const result=await axios.post("http://localhost:3001/api/v1/library/book/add",{
+        const result=await axios.post(`${process.env.REACT_APP_BASE_URL}/api/v1/library/book/add`,{
             book_name,
             book_author,
             book_publisher,

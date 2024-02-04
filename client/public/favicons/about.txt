@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Prompt
+- Font Author: Copyright (c) 2015, Cadson Demak (info@cadsondemak.com)
+- Font Source: http://fonts.gstatic.com/s/prompt/v10/-W_8XJnvUD7dzB2Cv_44bmkvc5Q9dw.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
