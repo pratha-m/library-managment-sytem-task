@@ -4,7 +4,6 @@
     min-height: 35.9vh;
 }
 .imgCont{
-    height: 80vh;
     width: 100%;
     overflow: hidden;
 }
@@ -57,4 +56,18 @@
     background-color: #4e6bff;
     font-size: 18px;
     cursor: pointer;
+}
+@media screen and (max-width:515px){
+    .homePage .textCont .innText{
+        width: 308px;
+    }
+    .homePage .textCont .innText .homeHead{
+        font-size: 28px;
+    }
+    .homePage .textCont .innText .homePara{
+        font-size: 20px;
+    }
+    .homePage .textCont .innText .button{
+       padding: 8px 12px; 
+    }  
 }
